@@ -37,7 +37,7 @@ def get_code_from_description(description):
     response = client.completions.create(
         model="gpt-3.5-turbo-instruct",
         prompt=f"Write python code using matplotlib to plot the graph: {description}",
-        max_tokens=300,
+        max_tokens=800,
         temperature=0,
     )
     return response.choices[0].text.strip()
